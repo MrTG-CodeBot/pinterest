@@ -35,12 +35,36 @@ def download_image(image_url, filename):
         print(f"Unexpected error: {e}")
 
 if __name__ == '__main__':
+    print("I can only download photos.")
     pinterest_url = input("Enter the Pinterest pin URL: ")
     image_url = extract_image_url(pinterest_url)
     print(f"Image url {image_url}")
     if image_url:
         filename = image_url.split('/')[-1]
-        download_image(image_url, filename)
-
+        download_image(image_url , filename)
     else:
         print("Image URL not found. Consider respecting Pinterest's terms of service.")
+    zeros = input("Do you wanna to download another photo(YES/NO): ")
+    zeros=zeros.lower()
+    if zeros=="yes":
+        while True:
+            pinterest_url = input("Enter the Pinterest pin URL: ")
+            image_url = extract_image_url(pinterest_url)
+            print(f"Image url {image_url}")
+            if image_url:
+                filename = image_url.split('/')[-1]
+                download_image(image_url , filename)
+                ones = input("Do you wanna to download another photo(YES/NO): ")
+                ones=ones.lower()
+                if ones=="no":
+                    break
+                elif ones!=("yes"or"no"):
+                    print("Send Yes or No only.")           
+            else:
+                print("Image URL not found. Consider respecting Pinterest's terms of service.")
+    elif zeros=="no":
+        print("Ok bye")
+    else:
+        print("Send Yes or No only")
+            
+            
