@@ -1,5 +1,11 @@
-import requests
-from bs4 import BeautifulSoup
+import subprocess
+
+try:
+    import requests
+    import bs4
+    from bs4 import BeautifulSoup
+except ImportError:
+    subprocess.run(["pip", "install", "requests", "bs4"])
 
 def extract_image_url(pinterest_url):
     try:
@@ -59,12 +65,10 @@ if __name__ == '__main__':
                 if ones=="no":
                     break
                 elif ones!=("yes"or"no"):
-                    print("Send Yes or No only.")           
+                    print("Send Yes or No only.")
             else:
                 print("Image URL not found. Consider respecting Pinterest's terms of service.")
     elif zeros=="no":
         print("Ok bye")
     else:
         print("Send Yes or No only")
-            
-            
