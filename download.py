@@ -5,6 +5,7 @@ try:
     import bs4
     from bs4 import BeautifulSoup
 except ImportError:
+    print("downloading...")
     subprocess.run(["pip", "install", "requests", "bs4"])
 
 def extract_image_url(pinterest_url):
