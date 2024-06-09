@@ -1,5 +1,4 @@
-libxslt
-libxml2
+subprocess.run==0.0.8
 charset_normalizer
 urllib3
 chardet
