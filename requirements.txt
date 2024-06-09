@@ -1,3 +1,13 @@
+charset_normalizer
+urllib3
+chardet
+pycryptodomex
+wheel
+six
+python-dotenv
+motor
+python-docx
 requests
-bs4 
-BeautifulSoup
+bs4==0.0.1
+beautifulsoup4
+
