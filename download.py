@@ -15,7 +15,6 @@ def extract_image_url(pinterest_url):
 
         soup = BeautifulSoup(response.content, 'html.parser')
         image_tags = soup.find_all('img', class_=['h-image-fit', 'h-unsplash-img'])
-        print(f"image tag {image_tags}")
         if not image_tags:
             image_tags = soup.find_all('img', attrs={'src': lambda src: src and src.startswith('https://i.pinimg.com/')})
         if image_tags:
@@ -45,7 +44,6 @@ if __name__ == '__main__':
     print("I can only download photos.")
     pinterest_url = input("Enter the Pinterest pin URL: ")
     image_url = extract_image_url(pinterest_url)
-    print(f"Image url {image_url}")
     if image_url:
         filename = image_url.split('/')[-1]
         download_image(image_url , filename)
