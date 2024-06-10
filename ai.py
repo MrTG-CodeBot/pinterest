@@ -20,7 +20,7 @@ model = genai.GenerativeModel(model_name="gemini-1.5-flash",
                               generation_config=generation_config,
 
 
-prompt_parts = [
+prompt_parts = [input("ask a question")
 ]
 
 response = model.generate_content(prompt_parts)
