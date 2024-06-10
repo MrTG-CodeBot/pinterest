@@ -48,4 +48,4 @@ model = genai.GenerativeModel(
 
 prompt_parts = [user_input]
 response = model.generate_content(prompt_parts)
-print(response)
+print(response.text)
