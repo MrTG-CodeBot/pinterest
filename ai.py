@@ -1,11 +1,12 @@
 import subprocess
 
 try:
-    import google.generativeai as genai
+    import google.generativeai 
 except ImportError:
     print("downloading google-generativeai")
     subprocess.run(["pip", "install", "google-generativeai"])
-
+    
+import google.generativeai as genai
 genai.configure(api_key="AIzaSyAGv5kIu2-E0N9eTdK7lzevl2nr3sOk6is")
 
 user_input = input("ask a question:\n")
