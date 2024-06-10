@@ -8,7 +8,7 @@ except ImportError:
 
 genai.configure(api_key="AIzaSyAGv5kIu2-E0N9eTdK7lzevl2nr3sOk6is")
 
-user_input = input("ask a question")
+user_input = input("ask a question:\n")
 
 if user_input.lower() in ["who is your owner" , "what is your owner name"]:
     print("<^ ~ ^> ᴍʀ.ʙᴏᴛ ᵀᴳ </>\n\ncontact in telegram: https://t.me/MrTG_Coder")
